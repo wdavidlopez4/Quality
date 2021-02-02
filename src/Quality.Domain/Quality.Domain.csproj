@@ -5,9 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\Ventas\" />
-    <Folder Include="Entities\Producciones\" />
-    <Folder Include="Entities\Usuarios\" />
     <Folder Include="Factories\" />
     <Folder Include="Ports\" />
   </ItemGroup>
