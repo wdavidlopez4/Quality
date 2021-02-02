@@ -1,0 +1,3 @@
+src = codigo fuente, librerias, capas de la aplicacion
+docs = documentacion de la aplicacion, arquitecturas y demas diseños
+apps = contiene la tecnologia en que se presentara la applicacion en web, movil...
