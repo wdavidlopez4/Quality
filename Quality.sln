@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quality.Application", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quality.Infrastructura", "src\Quality.Infrastructura\Quality.Infrastructura.csproj", "{29C99556-9C03-4E4D-AFC0-00489B57FF23}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1E0BE1DB-75B9-450E-A81F-C68E63B25206}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9846786F-A20A-46FA-9D2E-BCB5B3D4626C} = {1E0BE1DB-75B9-450E-A81F-C68E63B25206}
+		{F6E52405-4F44-443E-9F3E-0B9CCD5320A8} = {1E0BE1DB-75B9-450E-A81F-C68E63B25206}
+		{29C99556-9C03-4E4D-AFC0-00489B57FF23} = {1E0BE1DB-75B9-450E-A81F-C68E63B25206}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5AB2583B-19FF-4B61-9E07-72CEC5CF3E02}
