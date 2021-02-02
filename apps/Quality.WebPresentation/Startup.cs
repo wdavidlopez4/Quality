@@ -1,9 +1,13 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Quality.Infrastructura.EF;
+using Quality.Infrastructura.IOC;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +28,17 @@ namespace Quality.WebPresentation
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            //registrar Inyecions (IOC)
+            RegistrarServicios(services);
+
+            //entity framework db context
+            string connString = this.Configuration.GetConnectionString("ConnectionString"); //obtenemos la cadena de coneccion DESDE EL ARCHIVO APPSETTINGS
+            services.AddDbContext<QualityContext>(
+                options => options.UseSqlServer(connString));
+
+            //mapeo de entidades
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +67,12 @@ namespace Quality.WebPresentation
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        //registrar Inyecciones (IOC)
+        public static void RegistrarServicios(IServiceCollection services)
+        {
+            InjectionContainer.Inyectar(services);
         }
     }
 }
