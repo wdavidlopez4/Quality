@@ -18,7 +18,7 @@ namespace Quality.Infrastructura.EF
 
         public DbSet<Stock> Stocks { get; set; }
 
-        public DbSet<Compra> compra { get; set; }
+        public DbSet<Compra> Compras { get; set; }
 
         public DbSet<Factura> Facturas { get; set; }
 
