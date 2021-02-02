@@ -8,4 +8,9 @@
     <ProjectReference Include="..\Quality.Domain\Quality.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="VentasServices\" />
+    <Folder Include="UsuarioServices\" />
+  </ItemGroup>
+
 </Project>
