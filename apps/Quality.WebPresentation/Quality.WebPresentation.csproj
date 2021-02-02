@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Quality.Application\Quality.Application.csproj" />
+    <ProjectReference Include="..\..\src\Quality.Domain\Quality.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Quality.Infrastructura\Quality.Infrastructura.csproj" />
+  </ItemGroup>
+
+</Project>
